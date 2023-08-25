@@ -6,6 +6,7 @@ import * as API from './resources/index';
 import * as Errors from './error';
 import type { Agent } from 'openai/_shims/agent';
 import * as Uploads from './uploads';
+import * as Streaming from './streaming';
 
 export interface ClientOptions {
   /**
@@ -262,6 +263,8 @@ export namespace OpenAI {
   export import FineTuneListEventsParams = API.FineTuneListEventsParams;
   export import FineTuneListEventsParamsNonStreaming = API.FineTuneListEventsParamsNonStreaming;
   export import FineTuneListEventsParamsStreaming = API.FineTuneListEventsParamsStreaming;
+  
+  export import Stream = Streaming.Stream;
 }
 
 export default OpenAI;
